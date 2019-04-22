@@ -53,7 +53,7 @@ public class DataSource {
         return items;
     }
 
-    public boolean remove (int id){
+    public boolean remove (long id){
         String where = ItemsDBOpenHelper.COLUMN_ID + "=" + id;
         int result = database.delete(ItemsDBOpenHelper.TABLE_ITEMS,where,null);
         return (result==1);
